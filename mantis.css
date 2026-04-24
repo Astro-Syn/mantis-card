@@ -1,3 +1,12 @@
+:root {
+    --col1: #1afe49;
+    --col2: #083e12;
+    --col3: #321450;
+    --col4: rgb(128, 74, 216);
+    --col5: rgb(250, 255, 251);
+}
+
+
 body {
     margin: 0;
     
@@ -29,11 +38,37 @@ body {
 }
 
 .top-title-wrapper {
-    height: 30%;
+    padding: 0;
+    position: relative;
+    height: 50%;
     background: red;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.top-title-wrapper h1 {
+    position: absolute;
+    top: 0;
+    font-family: "Stalinist One";
+    margin: 0;
+    font-size: 8em;
+    color: var(--col1);
+    letter-spacing: 0.5em;
+    padding: 0;
+}
+
+.h1-under {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;    
+    width: 100%;
+    position: absolute;
+    font-family: "Science Gothic";
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    color: var(--col4);
 }
 
 .bottom-content {
@@ -47,6 +82,60 @@ body {
     flex: 1;
     background: yellow;
     height: 100%;
+    overflow: hidden;
+}
+
+
+
+.bc-top-text-wrapper {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    background: blue;
+}
+
+
+
+.top-txt {
+    position: absolute;
+    top: 0;
+    background: white;
+    font-size: 3em;
+    font-family: "Stalinist One";
+    height: 80%;
+}
+
+.top-txt p {
+    margin: 0;
+    padding: 0;
+}
+
+.top-txt p:nth-child(2){
+    -webkit-text-stroke: 2px var(--col1);
+}
+
+.poly-shape1 {
+    position: absolute;
+    bottom: 0.7em;
+    left: 0;
+    
+    clip-path: polygon(
+        0 25%, 5% 0, 37% 0, 43% 8%,
+        100% 7%, 100% 28%,
+        83% 28%, 78% 38%, 65% 38%,
+        60% 30%, 38% 31%, 33% 24%
+    );
+    background: pink;
+    width: 80%;
+    height: 20%;
+    margin: 0;
+    padding: 0;
+       backdrop-filter: blur(8px);
+    border: 1px solid rgba(26, 254, 73, 0.4);
+    box-shadow:
+        0 0 10px rgba(26, 254, 73, 0.3),
+        inset 0 0 15px rgba(26, 254, 73, 0.15);
+    
 }
 
 .bc-right{
@@ -54,3 +143,11 @@ body {
     background: purple;
 }
 
+.mantis-pic-area {
+    width: 80%;
+    height: 80%;
+    background-image: url('/Images/mantis-pic1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
