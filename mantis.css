@@ -143,11 +143,38 @@ body {
     background: purple;
 }
 
+
 .mantis-pic-area {
-    width: 80%;
+    position: relative;
+    clip-path: polygon(100% 0, 100% 78%, 91% 90%, 51% 91%, 36% 100%, 0 100%, 0 15%, 12% 0);
+    width: 50%;
     height: 80%;
-    background-image: url('/Images/mantis-pic1.png');
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    
 }
+
+.mantis-pic-area::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: white;
+
+   
+    clip-path: polygon(100% 0, 100% 78%, 91% 90%, 51% 91%, 36% 100%, 0 100%, 0 15%, 12% 0);
+
+    z-index: 2;
+}
+
+.mantis-pic-area::after {
+    content: "";
+    position: absolute;
+    inset: 2px;
+
+   background-image: url('/Images/mantis-pic1.png');
+    
+    clip-path: polygon(100% 0, 100% 78%, 91% 90%, 51% 91%, 36% 100%, 0 100%, 0 15%, 12% 0);
+
+    z-index: 3;
+}
+
